@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,23 @@ namespace Mitgliederverwaltung_WpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        //Memberlist
+        public ObservableCollection<Member> Members { get; set; }
+        
         public MainWindow()
         {
+
+
             InitializeComponent();
+
+            Members = new ObservableCollection<Member>
+            {
+                 new Member { FirstName = "Max", LastName = "Muster", Jan = true, Feb = false },
+            };
+
+            MembersDataGrid.ItemsSource = Members;
+
+
         }
     }
 }

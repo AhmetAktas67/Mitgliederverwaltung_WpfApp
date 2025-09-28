@@ -7,6 +7,51 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+
+            <!--Mitglied add Button-->
+            <Button Content="Mitglied hinzufügen" Width="150" Height="30" Margin="10" />
+            <!--Mitglied Delete Button-->
+            <Button Content="Mitglied löschen" Width="150" Height="30" Margin="10" />
+
+        </StackPanel>
+
+        <DataGrid  x:Name="MembersDataGrid"  AutoGenerateColumns="False" Grid.Row="1" Margin="10">
+            <DataGrid.Columns>
+                
+                <DataGridTextColumn Header="Vorname" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Header="Nachname" Binding="{Binding LastName}"/>
+
+                <DataGridCheckBoxColumn Header="Jan" Binding="{Binding Jan}" Width="50"/>
+                <DataGridCheckBoxColumn Header="Feb" Binding="{Binding Feb}" Width="50"/>
+                <DataGridCheckBoxColumn Header="Mär" Binding="{Binding Mar}" Width="50"/>
+                <DataGridCheckBoxColumn Header="Apr" Binding="{Binding Apr}" Width="50"/>
+                <DataGridCheckBoxColumn Header="Mai" Binding="{Binding Mai}" Width="50"/>
+                <DataGridCheckBoxColumn Header="Jun" Binding="{Binding Jun}" Width="50"/>
+                <DataGridCheckBoxColumn Header="Jul" Binding="{Binding Jul}" Width="50"/>
+                <DataGridCheckBoxColumn Header="Aug" Binding="{Binding Aug}" Width="50"/>
+                <DataGridCheckBoxColumn Header="Sep" Binding="{Binding Sep}" Width="50"/>
+                <DataGridCheckBoxColumn Header="Okt" Binding="{Binding Okt}" Width="50"/>
+                <DataGridCheckBoxColumn Header="Nov" Binding="{Binding Nov}" Width="50"/>
+                <DataGridCheckBoxColumn Header="Dez" Binding="{Binding Dez}" Width="50"/>
+
+
+
+            </DataGrid.Columns>
+
+
+
+        </DataGrid>
+
+
+
+
+
+
     </Grid>
 </Window>
