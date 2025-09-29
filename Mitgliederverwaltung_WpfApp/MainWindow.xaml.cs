@@ -39,5 +39,19 @@ namespace Mitgliederverwaltung_WpfApp
 
 
         }
+
+        private void AddMember_Click(object sender, RoutedEventArgs e)
+        {
+            AddMember addMemberWindow = new AddMember();
+
+           
+            bool? result = addMemberWindow.ShowDialog();
+            
+            //addmember true add member to list
+            if (result == true && addMemberWindow.NewMember != null)
+            {
+                Members.Add(addMemberWindow.NewMember);
+            }
+        }
     }
 }

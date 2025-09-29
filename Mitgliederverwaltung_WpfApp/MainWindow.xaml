@@ -15,7 +15,7 @@
         <StackPanel Orientation="Horizontal">
 
             <!--Mitglied add Button-->
-            <Button Content="Mitglied hinzufügen" Width="150" Height="30" Margin="10" />
+            <Button Content="Mitglied hinzufügen" Click="AddMember_Click" Width="150" Height="30" Margin="10" />
             <!--Mitglied Delete Button-->
             <Button Content="Mitglied löschen" Width="150" Height="30" Margin="10" />
 
@@ -23,7 +23,8 @@
 
         <DataGrid  x:Name="MembersDataGrid"  AutoGenerateColumns="False" Grid.Row="1" Margin="10">
             <DataGrid.Columns>
-                
+
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" />
                 <DataGridTextColumn Header="Vorname" Binding="{Binding FirstName}"/>
                 <DataGridTextColumn Header="Nachname" Binding="{Binding LastName}"/>
 

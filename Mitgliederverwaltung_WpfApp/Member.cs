@@ -11,6 +11,9 @@ namespace Mitgliederverwaltung_WpfApp
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
+        private static int _nextId = 1;
+
+        public int Id { get; private set; }
 
         public bool Jan { get; set; }
         public bool Feb { get; set; }
@@ -25,6 +28,13 @@ namespace Mitgliederverwaltung_WpfApp
         public bool Nov { get; set; }
         public bool Dez { get; set; }
 
+        public Member()
+        {
+            Id = _nextId++;
+        }
+
     }
+
+
 
 }

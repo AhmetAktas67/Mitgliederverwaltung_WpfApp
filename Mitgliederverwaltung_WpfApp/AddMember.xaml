@@ -5,8 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Mitgliederverwaltung_WpfApp"
         mc:Ignorable="d"
-        Title="AddMember" Height="450" Width="800">
+        Title="AddMember" Height="500" Width="350">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+          
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            
+            
+            
+            <TextBlock  FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"  Text="Forname:" Margin="10"/>
+            
+            <TextBox HorizontalAlignment="Right" Grid.ColumnSpan="2" Width="250" Height="30" x:Name="FirstNameTextBox" Margin="10"/>
+
+            
+            <TextBlock  FontWeight="Bold" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center"  Text="Lastname:" Margin="10"/>
+
+            <TextBox HorizontalAlignment="Right" Grid.Row="1"  Grid.ColumnSpan="2" Width="250" Height="30" x:Name="LastNameTextBox" Margin="10"/>
+
+
+
+        </Grid>
+       
+        <StackPanel Grid.Row="2">
+            <Button Click="Ok_Click" Content="ok"></Button>
+            
+        </StackPanel>
+
     </Grid>
+    
 </Window>
